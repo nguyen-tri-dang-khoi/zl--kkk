@@ -1,0 +1,183 @@
+@font-face {
+    font-family: zalo-font;
+    src:url(../font/zalo-font.519e999e8393dc55edfa5646d5d9815b.woff2) format("woff2"),url(../font/zalo-font.a278ef70232e221518ab67c81e7198dc.ttf) format("truetype"),url(../assets/zalo-font.141e1a63579bf49c9e04f6ad0fbde5bf.svg) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    a {
+        display: block;
+        text-align:center;
+        text-decoration: none;
+        position: relative;
+        
+    }
+    img {
+        width:50px;
+        height:50px;
+        @include border-radius(50%);
+        border:1px solid #fff;
+    }
+    &>ul>li {
+        padding:17px 0px;
+        &.active {
+            background-color: $dark-blue;
+        }
+        &:hover:not(.active):not(.avatar) {
+            background-color:$light-blue;
+            transition: .3s;
+            
+        }
+        i {
+            position: relative;
+            padding: 11px;
+            >span.num-red {
+                background-color:$red-dot;
+                color:#fff;
+                position: absolute;
+                top:0px;
+                right:0px;
+                font-size:13px;
+                @include border-radius(50%);
+                padding: 0px 6px 0px 6px;
+                font-weight: 600;
+            }
+        }
+        .fa {
+            font: normal normal normal $icon-size zalo-font;
+            &-msg:after {
+                content: "\ebf5";
+                color:#fff;
+            }
+            &-contact:after {
+                content: "\ea8f";
+                color:#fff;
+            }
+            &-todo:after {
+                content: "\ed11";
+                color:#fff;
+            }
+            &-cloud:after {
+                content: "\ea83";
+                color:#fff;
+            }
+            &-biztool:after {
+                content: "\ea22";
+                color:#fff;
+            }
+            &-setting:after {
+                content: "\ec96";
+                color:#fff;
+            }
+            
+        }
+    }
+
+    
+}
+
+.fa { 
+    font: normal normal normal 14px zalo-font;
+    &-search:after {
+        content:"\ec90";
+        color:$icon-primary;
+        font-weight: 600;
+    }
+    &-new-contact:after {
+        content:"\ec17";
+        font-size: 19px;
+    }
+    &-new-group:after {
+        content:"\ec23";
+        font-size: 19px;
+    }
+    &-solid-down:after {
+        content:"\ebaa";
+        font-size:16px;
+        position: relative;
+        top: 3px;
+    }
+    &-solid-more:after {
+        content:"\ecc4";
+        font-size:16px;
+        position: relative;
+        top: 3px;
+    }
+    &-square-uncheck:after {
+        content:"\ed2e";
+        font-size:1.25rem;
+
+    }
+    &-square-check:after {
+        content:"\ea64";
+        font-size:1.25rem;
+        color:#0068ff;
+    }
+    &-fill:after {
+        content: "\ed04";
+        font-size: 1.25rem;
+    }
+    &-stranger:after {
+        content: "\ece4";
+        font-size:1.25rem;
+    }
+    &-arrow-right:after {
+        content: "\ea19";
+        font-size:1.25rem;
+    }
+    &-close::after {
+        content: "\ea81";
+        font-size:14px;
+    }
+    &-solid-down-1:after {
+        content:"\ecb3";
+        font-size: 19px;
+    }
+    &-inactive-network:after {
+        content: "\ebc9";
+        font-size: 12px;
+    }
+    &-icon-solid-camera:after {
+        content: "\eba5";
+        font-size:1.25rem;
+    }
+    &-uncheck-2:after {
+        content:"\ed2d";
+    }
+    &-solid-close:after {
+        content: "\ecb0";
+        font-size:1.25rem;
+    }
+    &-check-2:after {
+        content: "\ea63";
+        font-size:1.5rem;
+        color:#0068ff;
+    }
+    &-prev:after {
+        content: "\ea77";
+        font-size:1.5rem;
+    }
+    &-next:after {
+        content: "\ea78";
+        font-size:1.5rem;
+    }
+    &-photo:after {
+        content:"\ec4f";
+        font-size:1.5rem;
+    }
+    &-solid-left:after {
+        content:"\ecc3";
+    }
+
+    &-solid-right:after {
+        content:"\ecca";
+    }
+    &-icon-solid-left:after {
+        content:"\EBB0";
+        font-size:1.25rem;
+    }
+    
+}
