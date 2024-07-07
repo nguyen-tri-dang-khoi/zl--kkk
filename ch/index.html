@@ -579,7 +579,49 @@
                         
                     </div>
                 </div> -->
-
+                <div class="review-img">
+                    <div class="view-image txt-center">
+                        <img class="img-resize round" src="img/slides/1_family.jpg" salt="">
+                    </div>
+                    <div class="view-image-slideshow d-flex j-between a-center">
+                        <div class="slide-image-next">
+                            <i class="fa fa-Chevron_Left_24_Line"></i>
+                        </div>
+                        <div class="slide-round-img">
+                            <div class="img-hover"></div>
+                            <img class="img-resize round" src="img/slides/1_family.jpg" alt="">
+                        </div>
+                        <div class="slide-round-img">
+                            <div class="img-hover"></div>
+                            <img class="img-resize round" src="img/slides/2_family.jpg" alt="">
+                        </div>
+                        <div class="slide-round-img">
+                            <div class="img-hover"></div>
+                            <img class="img-resize round" src="img/slides/3_family.jpg" alt="">
+                        </div>
+                        <div class="slide-round-img">
+                            <div class="img-hover"></div>
+                            <img class="img-resize round" src="img/slides/4_work.jpg" alt="">
+                        </div>
+                        <div class="slide-round-img d-none">
+                            <div class="img-hover"></div>
+                            <img class="img-resize round" src="img/slides/5_work.jpg" alt="">
+                        </div>
+                        <div class="slide-round-img d-none">
+                            <img class="img-resize round" src="img/slides/6_work.jpg" alt="">
+                        </div>
+                        <div class="slide-image-prev">
+                            <i class="fa fa-Chevron_Right_24_Line"></i>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="modal-footer">
+                <div class="two-btn-grp">
+                    <button class="btn btn-grey mr-15 btn-close-modal">Hủy</button>
+                    <button class="btn btn-blue mr-12">Cập nhật</button>
+                </div>
             </div>
         </div>
     </div>
@@ -781,6 +823,12 @@
             
         
         }
+        $('.slide-round-img').on('click',function(){
+            $('.slide-round-img').removeClass('active');
+            $(event.currentTarget).addClass('active');
+            let img_src = $(event.currentTarget).find('img').attr('src');
+            $('.view-image img').attr('src',img_src);
+        })
     </script>
 
 </body>

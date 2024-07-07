@@ -179,5 +179,12 @@
         content:"\EBB0";
         font-size:1.25rem;
     }
-    
+    &-Chevron_Left_24_Line:after {
+        content: "\EA71";
+        font-size:1.25rem;
+    }
+    &-Chevron_Right_24_Line:after {
+        content: "\EA73";
+        font-size:1.25rem;
+    }
 }

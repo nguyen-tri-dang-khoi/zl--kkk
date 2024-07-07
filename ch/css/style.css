@@ -318,6 +318,14 @@ body {
   content: "\ebb0";
   font-size: 1.25rem;
 }
+.fa-Chevron_Left_24_Line:after {
+  content: "\ea71";
+  font-size: 1.25rem;
+}
+.fa-Chevron_Right_24_Line:after {
+  content: "\ea73";
+  font-size: 1.25rem;
+}
 
 .section-b {
   height: 100vh;
@@ -984,7 +992,7 @@ body {
 }
 .modal.modal-upload-image .modal-content {
   width: 380px;
-  height: calc(100% - 50px);
+  height: calc(100% - 300px);
 }
 .modal.modal-upload-image .modal-content .modal-body {
   padding: 6px 16px;
@@ -1064,6 +1072,14 @@ body {
 .modal.modal-upload-image .modal-content .modal-header div.back-hover > i:hover {
   background-color: #dfe2e7;
   cursor: pointer;
+}
+.modal.modal-upload-image .modal-content .two-btn-grp {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #ddd;
+  padding-top: 12px;
+  display: flex;
+  justify-content: end;
 }
 .modal.modal-alert .modal-content {
   width: 374px;
@@ -1328,4 +1344,50 @@ body {
   to {
     transform: scale(1);
   }
+}
+.view-image {
+  margin-top: 40px;
+}
+.view-image .img-resize {
+  width: 300px;
+}
+
+.view-image-slideshow {
+  max-width: 400px;
+  margin-top: 80px;
+}
+.view-image-slideshow .slide-round-img {
+  position: relative;
+  cursor: pointer;
+}
+.view-image-slideshow .slide-round-img div.img-hover {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0px;
+  border-radius: 50%;
+  z-index: 2;
+  background-color: transparent;
+}
+.view-image-slideshow .slide-round-img div.img-hover:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1019607843);
+}
+.view-image-slideshow .slide-round-img img {
+  width: 50px;
+  border: 1px solid #b6bec9;
+  transition: 0.2s border-color;
+}
+.view-image-slideshow .slide-round-img.active img {
+  border: 2px solid #0068ff;
+}
+.view-image-slideshow .slide-image-next, .view-image-slideshow .slide-image-prev {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+}
+.view-image-slideshow .slide-image-next:hover, .view-image-slideshow .slide-image-prev:hover {
+  background-color: #dfe2e7;
 }/*# sourceMappingURL=style.css.map */

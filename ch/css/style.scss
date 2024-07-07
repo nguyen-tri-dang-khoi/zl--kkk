@@ -785,7 +785,7 @@ body {
     &.modal-upload-image {
         .modal-content {
             width:380px;
-            height: calc(100% - 50px);
+            height: calc(100% - 300px);
             .modal-body {
                 padding: 6px 16px;
                 margin-top: 8px;
@@ -873,6 +873,14 @@ body {
                     }
 
                 }
+            }
+            .two-btn-grp {
+                width: 100%;
+                border: none;
+                border-top: 1px solid #ddd;
+                padding-top: 12px;
+                display: flex;
+                justify-content: end;
             }
         }
     }
@@ -1127,4 +1135,50 @@ body {
 @keyframes zoom-modal {
     from {transform: scale(0);}
     to {transform: scale(1);}
+}
+.view-image {
+    margin-top:40px;
+    .img-resize {
+        width: 300px;
+    }
+}
+.view-image-slideshow {
+    max-width: 400px;
+    margin-top: 80px;
+    .slide-round-img {
+        position: relative;
+        cursor: pointer;
+        div.img-hover {
+            width:50px;
+            height: 50px;
+            position: absolute;
+            top:0px;
+            border-radius: 50%;
+            z-index: 2;
+            background-color:transparent;
+            &:hover{
+                cursor: pointer;
+                background-color: #0000001a;
+            }
+        }
+        img {
+            width:50px;
+            border: 1px solid #b6bec9;
+            transition: .2s border-color;
+        }
+        &.active {
+            img {
+                border: 2px solid #0068ff;
+            }
+        }
+    }
+    .slide-image-next,.slide-image-prev {
+        cursor: pointer;
+        padding:5px;
+        border-radius: 50%;
+        @include align-center;
+        &:hover {
+            background-color: $button-close-hover;
+        }
+    }
 }
